@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Modern bakery</title>
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <header>
@@ -12,37 +13,46 @@
           <img src="./images/logo.svg" alt="logo" />
         </a>
         <ul>
-          <li><a href="#">Franchise</a></li>
-          <li><a href="#">Traditions</a></li>
-          <li><a href="#">Formats</a></li>
-          <li><a href="#">Contacts</a></li>
+          <li><a class="link" href="#traditions-section">Our Traditions</a></li>
+          <li><a class="link" href="#head-chefs-section">Head chefs</a></li>
+          <li><a class="link" href="#formats-section">Formats</a></li>
+          <li><a class="link" href="#contact-section">Contacts</a></li>
         </ul>
       </nav>
-      <button type="button">Request Call</button>
+      <button class="button-req" type="button">Request Call</button>
     </header>
     <main>
       <section>
-        <h1>Modern Bakery</h1>
+        <h1 class="hero-title"><span class="accent">Modern</span> Bakery</h1>
+      </section>
+      <section id="traditions-section">
+        <ul class="advantages-list">
+          <li>High demand on the market</li>
+          <li>Affordable formats</li>
+          <li>Experienced management team</li>
+        </ul>
       </section>
       <section>
-        <h2>A new traditions format</h2>
+        <h2 class="section-title">A new traditions format</h2>
         <p>
-          <span>shop bakery - </span> this bakery has taken all the best aspects
-          and preserved the taste of traditional baked goods and the naturalness
-          of the ingredients.
+          <span class="accent">shop bakery - </span> this bakery has taken all
+          the best aspects and preserved the taste of traditional baked goods
+          and the naturalness of the ingredients.
         </p>
         <p>
           We operate like the most famous chains —
-          <span>5 minutes and your order is ready.</span> What's more, our
-          bakeries have a stylish design \and high-quality service!
+          <span class="accent">5 minutes and your order is ready.</span> What's
+          more, our bakeries have a stylish design \and high-quality service!
         </p>
         <img
           src="./images/baker-man.jpg"
           alt="smiling baker holding a tray of bread"
         />
       </section>
-      <section>
-        <h2>Our best chefs</h2>
+      <section id="head-chefs-section">
+        <h2 class="section-title">
+          Our best <span class="accent">chefs</span>
+        </h2>
         <article>
           <h3>Alice</h3>
           <p>Hi, I'm Alice</p>
@@ -60,7 +70,7 @@
         </article>
       </section>
       <section>
-        <h2 lang="en">Formats</h2>
+        <h2 class="section-title" lang="en">Formats</h2>
         <ul>
           <li>
             <article>
@@ -79,17 +89,18 @@
           </li>
         </ul>
       </section>
+      <section id="formats-section"></section>
       <section>
-        <h2>Join the bakery network</h2>
+        <h2 class="section-title">Join the bakery network</h2>
       </section>
+      <section id="contact-section"></section>
     </main>
-
     <footer>
       <nav>
-        <a href="#">/</a>
+        <a href="./index.html">/</a>
         <ul>
-          <li><a href="#">Franchise</a></li>
-          <li><a href="#">Traditions</a></li>
+          <li><a href="#">Our Traditions</a></li>
+          <li><a href="#">Head chefs</a></li>
           <li><a href="#">Formats</a></li>
           <li><a href="#">Contacts</a></li>
         </ul>
@@ -118,7 +129,6 @@
       <a href="#" target="_blank">Privacy Policy</a>
       <small>© <span id="year"></span></small>
     </footer>
-
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
     </script>
