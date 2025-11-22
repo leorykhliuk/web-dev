@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+}
+
+.parent {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 20px;
+  border: 1px dotted black;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.item.red {
+  width: 150px;
+  height: 150px;
+  background-color: red;
+  cursor: pointer;
+  transform: translate(5px, 10px);
+  transition: background-color 1s, color 4s;
+}
+
+.item.red:hover {
+  background-color: pink;
+  color: rgb(68, 224, 16);
+}
+
+.item.green {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  /* transform: rotate(90deg); */
+  cursor: pointer;
+  animation-name: spin;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(10deg);
+    background-color: black;
+  }
+  100% {
+    transform: rotate(360deg);
+    background-color: orange;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.item.blue {
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  transform: scale(0.5);
+  cursor: pointer;
+}
+
+.item.orange {
+  width: 150px;
+  height: 150px;
+  background-color: orange;
+  transform: skew(20deg, 20deg);
+  cursor: pointer;
+}
+
+/* check-box play */
+.checkbox {
+  position: relative;
+}
+
+.checkbox-input {
+  appearance: none;
+}
+
+.checkbox-input:checked + .checkbox-label::before {
+  background-color: green;
+  content: '✓';
+  color: white;
+  text-align: center;
+  font-size: 14px;
+}
+
+.checkbox-label {
+  font-size: 24px;
+  margin: 24px 24px;
+  cursor: pointer;
+}
+
+.checkbox-label::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  margin-top: 5px;
+  border: 1px solid black;
+  content: ' ';
+}

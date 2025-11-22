@@ -1,0 +1,61 @@
+@use './utils/variables' as vars;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: var(--color-primary-light);
+  color: var(--color-primary-dark);
+  font-family: 'Poppins', serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  margin: 0;
+  overflow-x: hidden;
+
+  @media screen and (min-width: vars.$bp-tablet) {
+    font-size: 18px;
+    font-weight: 400;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  display: inline-block;
+}
+
+address {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1288px;
+  margin: 0 auto;
+  padding: 0 24px;
+}

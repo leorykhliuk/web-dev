@@ -1,0 +1,25 @@
+@use './components/buttons';
+@use './components/carousel-button';
+@use './components/chief-card';
+@use './components/form_terms';
+@use './components/format-card';
+@use './components/links';
+@use './components/input';
+
+@use './layouts/advantages-section';
+@use './layouts/contact-section';
+@use './layouts/footer';
+@use './layouts/formats-section';
+@use './layouts/headers';
+@use './layouts/chiefs-section';
+@use './layouts/hero-section';
+@use './layouts/mobile-menu';
+@use './layouts/modal';
+@use './layouts/section';
+@use './layouts/traditions-section';
+
+@use './base';
+@use './utils/fonts';
+@use './utils/variables' as vars;
+@use './utils/utils';
+@use './utils/texts';

@@ -1,0 +1,13 @@
+{
+  "files.associations": {
+    "*.svg": "xml"
+  },
+  "liveSassCompile.settings.includeItems": ["scss/**/*.scss"],
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "/css"
+    }
+  ]
+}

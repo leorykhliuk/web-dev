@@ -4,133 +4,443 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Modern bakery</title>
-    <link rel="stylesheet" href="./css/styles.css" />
+    <!---Styles-->
+    <link rel="stylesheet" href="./css/main.css" />
+    <!--Swipe-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
   </head>
   <body>
-    <header>
-      <nav>
-        <a href="#">
-          <img src="./images/logo.svg" alt="logo" />
-        </a>
-        <ul>
-          <li><a class="link" href="#traditions-section">Our Traditions</a></li>
-          <li><a class="link" href="#head-chefs-section">Head chefs</a></li>
-          <li><a class="link" href="#formats-section">Formats</a></li>
-          <li><a class="link" href="#contact-section">Contacts</a></li>
-        </ul>
-      </nav>
-      <button class="button-req" type="button">Request Call</button>
+    <header class="header">
+      <div class="container">
+        <div class="header__container">
+          <nav class="header__nav">
+            <a href="#">
+              <img src="./images/logo.svg" alt="logo" />
+            </a>
+            <ul class="header__menu">
+              <li>
+                <a class="link" href="#traditions-section">Our Traditions</a>
+              </li>
+              <li><a class="link" href="#chiefs-section">Head chiefs</a></li>
+              <li><a class="link" href="#formats-section">Formats</a></li>
+              <li><a class="link" href="#contact-section">Contacts</a></li>
+            </ul>
+          </nav>
+          <button class="header__button button modal-btn-open" type="button">
+            Request Call
+          </button>
+          <button class="header__burger menu-btn-open" class="button">
+            <svg width="24" height="24">
+              <use href="./images/icons.svg#icon-menu"></use>
+            </svg>
+          </button>
+          <div class="mobile-menu">
+            <button class="mobile-menu__btn-close menu-btn-close" type="button">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
     </header>
     <main>
-      <section>
-        <h1 class="hero-title"><span class="accent">Modern</span> Bakery</h1>
+      <section class="hero-section">
+        <div class="container">
+          <h1 class="hero-section__title">
+            <span class="text-brand">Modern</span>
+            Bakery
+          </h1>
+          <button
+            class="hero-section__button button modal-btn-ope"
+            type="button"
+          >
+            Request Call
+          </button>
+        </div>
       </section>
-      <section id="traditions-section">
-        <ul class="advantages-list">
-          <li>High demand on the market</li>
-          <li>Affordable formats</li>
-          <li>Experienced management team</li>
-        </ul>
+      <section class="advantages-section">
+        <div class="container">
+          <h2 class="visually-hidden">Our advantages</h2>
+          <ul class="advantages-section__list">
+            <li class="advantages-section__item">High demand on the market</li>
+            <li class="advantages-section__item">Affordable formats</li>
+            <li class="advantages-section__item">
+              Experienced management team
+            </li>
+          </ul>
+        </div>
       </section>
-      <section>
-        <h2 class="section-title">A new traditions format</h2>
-        <p>
-          <span class="accent">shop bakery - </span> this bakery has taken all
-          the best aspects and preserved the taste of traditional baked goods
-          and the naturalness of the ingredients.
-        </p>
-        <p>
-          We operate like the most famous chains —
-          <span class="accent">5 minutes and your order is ready.</span> What's
-          more, our bakeries have a stylish design \and high-quality service!
-        </p>
-        <img
-          src="./images/baker-man.jpg"
-          alt="smiling baker holding a tray of bread"
-        />
+      <section class="traditions-section section" id="traditions-section">
+        <div class="container">
+          <div class="traditions-section__container">
+            <div class="traditions-section__content">
+              <h2 class="traditions-section__title section-title">
+                A new traditions format
+              </h2>
+              <p>
+                <span class="text-brand text-bold text-uppercase"
+                  >shop bakery -
+                </span>
+                this bakery has taken all the best aspects and preserved the
+                taste of traditional baked goods and the naturalness of the
+                ingredients.
+              </p>
+              <p
+                class="traditions-section__text traditions-section__text--limited"
+              >
+                We operate like the most famous chains —
+                <span class="text-brand text-bold"
+                  >5 minutes and your order is ready.</span
+                >
+                What's more, our bakeries have a stylish design and high-quality
+                service!
+              </p>
+            </div>
+            <img
+              class="traditions-section__image"
+              srcset="./images/baker-man.jpg 1x, ./images/baker-man@2x.jpg 2x"
+              src="./images/baker-man.jpg"
+              alt="smiling baker holding a tray of bread"
+            />
+          </div>
+        </div>
       </section>
-      <section id="head-chefs-section">
-        <h2 class="section-title">
-          Our best <span class="accent">chefs</span>
-        </h2>
-        <article>
-          <h3>Alice</h3>
-          <p>Hi, I'm Alice</p>
-          <p>
-            For 10 years now, I have been bringing <br />
-            interesting and delicious ideas to life.
-          </p>
-          <p>
-            <b>I will bake</b>
-            the most delicious treats for you!
-          </p>
-        </article>
-        <article>
-          <h3>Vincent</h3>
-        </article>
+      <section class="chiefs-section section" id="chiefs-section">
+        <div class="container">
+          <h2
+            class="chiefs-section__title section__title section__title--centered"
+          >
+            Our best <br />
+            <span class="text-brand-dark">master chiefs</span>
+          </h2>
+          <ul class="chiefs-section__list">
+            <li class="chiefs-section__item">
+              <article class="chief-card">
+                <img
+                  class="chief-card__photo"
+                  src="/images/alice-chief.jpg"
+                  alt="Alice the chief baker"
+                />
+                <div>
+                  <h3 class="chief-card__title">Alice</h3>
+                  <p class="chief-card__text">Hi, I'm Alice</p>
+                  <p class="chief-card__text">
+                    For 10 years now, I have been bringing interesting and
+                    <br />
+                    delicious ideas to life.
+                  </p>
+                  <p class="chief-card__text">
+                    I will bake the most delicious treats for you!
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li class="chiefs-section__item">
+              <article class="chief-card">
+                <img
+                  class="chief-card__photo"
+                  src="./images/vincent-chief.jpg"
+                  alt="Vincent the chief baker"
+                />
+                <div>
+                  <h3 class="chief-card__title">Vincent</h3>
+                  <p class="chief-card__text">Hi, I'm Vincent</p>
+                  <p class="chief-card__text">
+                    I have been a pastry chief for 18 years. SHOP BAKERY is our
+                    passion, which we share with you every time through our
+                    baked goods.
+                  </p>
+                  <p class="chief-card__text">
+                    <b>I will make</b> a unique filling for you to suit any
+                    taste!
+                  </p>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </div>
       </section>
-      <section>
-        <h2 class="section-title" lang="en">Formats</h2>
-        <ul>
-          <li>
-            <article>
-              <h3>Walrus</h3>
-            </article>
-          </li>
-          <li>
-            <article>
-              <h3 lang="en">Horseshoe</h3>
-            </article>
-          </li>
-          <li>
-            <article>
-              <h3>Handlebar</h3>
-            </article>
-          </li>
-        </ul>
+      <section class="formats-section section" id="formats-section">
+        <div class="container">
+          <h2 class="formats-section__title section__title--centered" lang="en">
+            Formats
+          </h2>
+          <div class="formats-section__container">
+            <button class="carousel-button" type="button">
+              <svg width="32" height="32">
+                <use href="./images/icons.svg#icon-arrow"></use>
+              </svg>
+            </button>
+            <ul class="formats-section__list">
+              <li class="formats-section__item">
+                <article class="format-card">
+                  <img
+                    src="./images/walrus.jpg"
+                    alt="Walrus format"
+                    class="format-card__image"
+                  />
+                  <h3 class="format-card__title" lang="en">Walrus</h3>
+                  <div class="format-card__text">
+                    <p>Area: up to 120 m2</p>
+                    <p>Menu: extended menu</p>
+                    <p>
+                      Staff: 2 sales assistants/cashiers, 2 bakers, 2 baker's
+                      assistants, 2 waiters
+                    </p>
+                    <p>Seating: available</p>
+                  </div>
+                </article>
+              </li>
+              <li class="formats-section__item">
+                <article class="format-card">
+                  <img
+                    src="./images/horseshoe.jpg"
+                    alt="Horseshoe format"
+                    class="format-card__image"
+                  />
+                  <h3 class="format-card__title" lang="en">Horseshoe</h3>
+                  <div class="format-card__text">
+                    <p>Area: up to 25 m2</p>
+                    <p>Menu: most popular menu items</p>
+                    <p>
+                      Staff: 2 sales assistants/cashiers, 2 bakers, 1 baker's
+                      assistant
+                    </p>
+                    <p>Seating: no seats available</p>
+                  </div>
+                </article>
+              </li>
+              <li class="formats-section__item">
+                <article class="format-card">
+                  <img
+                    src="./images/handlebar.png"
+                    alt="Handlebar format"
+                    class="format-card__image"
+                  />
+                  <h3 class="format-card__title" lang="en">Handlebar</h3>
+                  <div class="format-card__text">
+                    <p>Area: up to 15 m2</p>
+                    <p>Menu: most popular menu items</p>
+                    <p>Staff: 1 cashiers, 1 bakers, 1 baker's assistant</p>
+                    <p>Seating: no seats available</p>
+                  </div>
+                </article>
+              </li>
+            </ul>
+            <button class="carousel-button next" type="button">
+              <svg width="32" height="32">
+                <use href="./images/icons.svg#icon-arrow"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
       </section>
-      <section id="formats-section"></section>
-      <section>
-        <h2 class="section-title">Join the bakery network</h2>
-      </section>
-      <section id="contact-section"></section>
+      <!-- <section class="contact-section section" id="contact-section">
+        <div class="container">
+          <div class="contact-section__container">
+            <div class="contact-section__form">
+              <h2 class="contact-section__title section__title">
+                Join the bakery network
+              </h2>
+              <p>Fill out the form so we can contact you!</p>
+              <form name="contact-form" autocomplete="off">
+                <div class="contact-section__form-field input">
+                  <label class="input__label visually-hidden" for="user-name">
+                    Name
+                  </label>
+                  <input
+                    class="input__control"
+                    type="text"
+                    id="user-name"
+                    name="user-name"
+                    placeholder="Name"
+                    minlength="2"
+                    maxlength="20"
+                    required
+                  />
+                </div>
+                <div class="contact-section__form-field input">
+                  <label class="input__label visually-hidden" for="user-phone">
+                    Phone
+                  </label>
+                  <input
+                    class="input__control"
+                    type="tel"
+                    id="user-phone"
+                    name="user-phone"
+                    placeholder="Phone"
+                    required
+                  />
+                </div>
+                <div class="contact-section__form-field input">
+                  <label class="input__label visually-hidden" for="user-email"
+                    >Email</label
+                  >
+                  <input
+                    class="input__control"
+                    type="email"
+                    id="user-email"
+                    name="user-email"
+                    placeholder="Email"
+                    required
+                  />
+                </div>
+                <button class="contact-section__button button" type="submit">
+                  Request a call
+                </button>
+                <p class="form-terms">
+                  By clicking the button, I agree to the
+                  <a class="form-terms-link" href="#">privacy policy.</a>
+                </p>
+              </form>
+            </div>
+            <iframe
+              class="contact-map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3057.4874293790153!2d-75.11449549177247!3d39.97521130678455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6b7d8d4b54beb%3A0x89f514d88c3e58c1!2z0KTRltC70LDQtNC10LvRjNGE0ZbRjywg0J_QtdC90YHRltC70YzQstCw0L3RltGP!5e0!3m2!1suk!2sus!4v1762222272010!5m2!1suk!2sus"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section> -->
     </main>
-    <footer>
-      <nav>
-        <a href="./index.html">/</a>
-        <ul>
-          <li><a href="#">Our Traditions</a></li>
-          <li><a href="#">Head chefs</a></li>
-          <li><a href="#">Formats</a></li>
-          <li><a href="#">Contacts</a></li>
-        </ul>
-      </nav>
-      <address>
-        <ul>
-          <li><a href="tel:1252333333">+1 (252) 333 333</a></li>
-          <li><a href="mailto:contact@mail.com">contact@mail.com</a></li>
-          <li>
-            <a href="https://maps.app.goo.gl/dx4efUVf7V9rj5Ky7" target="_blank"
-              >98-44 W Gay St, West Chester, PA 19380</a
-            >
-          </li>
-          <li>
-            <a href="#">
-              <!--Social media link placeholder -->
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <!--Social media link placeholder -->
-            </a>
-          </li>
-        </ul>
-      </address>
-      <a href="#" target="_blank">Privacy Policy</a>
-      <small>© <span id="year"></span></small>
-    </footer>
+    <!-- <footer class="footer">
+      <div class="container">
+        <div class="footer-container">
+          <nav class="footer-nav">
+            <div class="footer-logo">
+              <a href="#">
+                <img src="./images/logo.svg" alt="logo-of-modern-bakery" />
+              </a>
+            </div>
+            <ul class="footer-menu">
+              <li><a class="link" href="#">Our Traditions</a></li>
+              <li><a class="link" href="#">Head chiefs</a></li>
+              <li><a class="link" href="#">Formats</a></li>
+              <li><a class="link" href="#">Contacts</a></li>
+            </ul>
+          </nav>
+          <address class="footer-address">
+            <ul class="address-list">
+              <li>
+                <a class="address-link" href="tel:1252333333">
+                  +1 (252) 333 333
+                </a>
+              </li>
+              <li>
+                <a class="address-link" href="mailto:contact@mail.com">
+                  contact@mail.com
+                </a>
+              </li>
+              <li>
+                <a
+                  class="address-link"
+                  href="https://maps.app.goo.gl/dx4efUVf7V9rj5Ky7"
+                  target="_blank"
+                >
+                  98-44 W Gay St, West Chester, PA 19380
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg class="address-icon" width="32" height="32">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <svg class="address-icon" width="32" height="32">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+            <div class="address-info">
+              <a class="address-link" href="#" target="_blank">
+                Privacy Policy
+              </a>
+              <small class="address-copyright">
+                ©
+                <span id="year"></span>
+                all rights reserved
+              </small>
+            </div>
+          </address>
+        </div>
+      </div>
+    </footer> -->
+    <div class="backdrop is-hidden">
+      <div class="modal">
+        <button class="modal__btn-close modal-btn-close" type="button">
+          Close
+        </button>
+        <h2>Request Call</h2>
+        <p>Submit your request and our specialist will contact you!</p>
+        <form name="modal-form" autocomplete="off">
+          <div class="modal__form-field input">
+            <label class="input__label visually-hidden" for="user-name">
+              Name
+            </label>
+            <input
+              class="input__control"
+              type="text"
+              id="user-name"
+              name="user-name"
+              placeholder="Name"
+              minlength="2"
+              maxlength="20"
+              required
+            />
+          </div>
+          <div class="modal__form-field input">
+            <label class="input__label visually-hidden" for="user-phone">
+              Phone
+            </label>
+            <input
+              class="input__control"
+              type="tel"
+              id="user-phone"
+              name="user-phone"
+              placeholder="Phone"
+              pattern="^\+[0-9]{12}"
+              required
+            />
+          </div>
+          <div class="modal__form-field input">
+            <label class="input__label visually-hidden" for="user-email">
+              Email
+            </label>
+            <input
+              class="input__control"
+              type="email"
+              id="user-email"
+              name="user-email"
+              placeholder="Email"
+              required
+            />
+          </div>
+          <button class="modal__button button" type="submit">
+            Request a call
+          </button>
+          <p class="form-terms">
+            By clicking the button, I agree to the
+            <a class="form-terms-link" href="#">privacy policy.</a>
+          </p>
+        </form>
+      </div>
+    </div>
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
     </script>
+    <script src="./scripts/modal.js"></script>
+    <script src="./scripts/mobile-menu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
   </body>
 </html>
